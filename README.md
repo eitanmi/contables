@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-# contables
-Console table generator
 
 A very simple C code that generates ASCII tables in console mode.
 The following example demonstrates the output of this API.
@@ -19,7 +17,7 @@ columns behind the scenes.
 </pre>
 
 Usage Example:
-
+<pre>
     int main()
     {
         con_table tbl;        
@@ -37,6 +35,8 @@ Usage Example:
 
         return 0;
     }
+
+</pre>
 
 Copyright (c) 2020, Eitan Michaelson
 All rights reserved.

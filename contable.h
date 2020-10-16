@@ -64,7 +64,7 @@ typedef enum
 
 }con_col_type;
 
-// Link list node that will be allocated as each column of our table/
+// Link list node that will be allocated for each column of our table/
 typedef struct con_col_t
 {
     char              name[32];
@@ -81,7 +81,7 @@ typedef struct con_table_t
 
     bool     columnsAdded;
     int      totalWidh;
-    con_col* columns; // The head of our buttons list.
+    con_col* columns; // The head of our columns list.
 
 } con_table;
 
@@ -105,7 +105,7 @@ void contable_print_separator(con_table* tbl);
 
 /**************************************************************************/ /**
  * @brief
- *  Print a table blank line.
+ *   Adds a blank line to the table.
  * @return void.
  *
  *****************************************************************************/
@@ -114,7 +114,9 @@ void contable_print_blank(con_table* tbl);
 
 /**************************************************************************/ /**
  * @brief
- *  Print table raw.
+ *  Print table raw, 'printf' style.
+ *  Eeach '%' arg will be positioned accroding to the columns we've added.
+ *  The first call to this function blocks the option to add more columns.
  * @return void.
  *
  *****************************************************************************/
@@ -132,7 +134,7 @@ void contable_destroy(con_table* tbl, bool separator);
 
 /**************************************************************************/ /**
  * @brief
- *  Initializes a table object.
+ *  Initializes a new table object.
  * @return void.
  *
  *****************************************************************************/

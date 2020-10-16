@@ -64,7 +64,7 @@ typedef enum
 
 }con_col_type;
 
-// Link list node that will be allocated for each column of our table/
+// Link list node that will be allocated for each column of our table.
 typedef struct con_col_t
 {
     char              name[32];
